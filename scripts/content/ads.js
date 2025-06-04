@@ -1,11 +1,12 @@
 const NB_IMAGES = 2;
-const NB_ADS = rand(5, 10);
-const MAX_WIDTH = 300;
-const MIN_WIDTH = 50;
+const NB_ADS = rand(7, 15);
+const MAX_WIDTH = 200;
+const MIN_WIDTH = 200;
 
 for (let i = 0; i < NB_ADS; i++) {
     const IMAGE_NAME = rand(1, NB_IMAGES) + ".png";
     const img = document.createElement("img");
+
     img.src = browser.runtime.getURL('images/ads/' + IMAGE_NAME);
     img.style.position = "fixed";
     img.style.width = rand(MIN_WIDTH, MAX_WIDTH) + "px";
@@ -29,37 +30,24 @@ for (let i = 0; i < NB_ADS; i++) {
     adLabel.style.letterSpacing = '0.5px';
     adLabel.style.zIndex = '10001';
 
-    const position = rand(0, 3);
-    const randomPosition = rand(3, 97);
+    const adsPerBorder = Math.round(NB_ADS / 2);
+    const imgWidth = parseInt(img.style.width, 10);
 
-    switch (position) {
-        case 0:
-            img.style.top = "20px";
-            img.style.left = randomPosition + "vw";
-            adLabel.style.top = "28px";
-            adLabel.style.left = (randomPosition + 0.8) + "vw";
-            break;
-        case 1:
-            img.style.bottom = img.height + "px";
-            img.style.left = randomPosition + "vw";
-            adLabel.style.bottom = "28px"
-            adLabel.style.left = (randomPosition + 0.8) + "vw";
-            break;
-        case 2:
-            img.style.top = randomPosition + "vh";
-            img.style.left = img.width + "px";
-            adLabel.style.top = (randomPosition + 0.8) + "vh";
-            adLabel.style.left = "28px";
-            break;
-        case 3:
-            img.style.top = randomPosition + "vh";
-            img.style.right = img.width + "px";
-            adLabel.style.top = (randomPosition + 0.8) + "vh";
-            adLabel.style.right = "28px";
-            break;
-        default:
-            break;
+    if (i < adsPerBorder) {
+        // Right border
+        img.style.bottom = (i * (90 / adsPerBorder)) + "vh";
+        img.style.right = "10px";
+        adLabel.style.bottom = (i * (90 / adsPerBorder) + 5) + "vh"; // Position the label slightly above the image
+        adLabel.style.right = "10px"; // Align the label with the image
+    } else if (i < adsPerBorder * 2) {
+        // Left border
+        const leftIndex = i - adsPerBorder;
+        img.style.bottom = (leftIndex * (90 / adsPerBorder)) + "vh";
+        img.style.left = "10px";
+        adLabel.style.bottom = (leftIndex * (90 / adsPerBorder) + 5) + "vh"; // Position the label slightly above the image
+        adLabel.style.left = "10px"; // Align the label with the image
     }
+
 
     document.body.appendChild(img);
     document.body.appendChild(adLabel);

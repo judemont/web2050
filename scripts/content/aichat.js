@@ -174,30 +174,13 @@ function aiPopup() {
                 botDiv.style.justifyContent = 'flex-start';
 
                 const botBubble = document.createElement('div');
-                const funFacts = [
-                    "Did you know that honey can last forever without going bad? Archaeologists even found 3,000-year-old jars in Egyptian tombs that are still edible.",
-                    "Here’s something curious: bananas qualify as berries, but strawberries don’t.",
-                    "Surprisingly, octopuses are equipped with three hearts and their blood is blue due to copper.",
-                    "It might blow your mind to learn that a single day on Venus is actually longer than its entire year.",
-                    "Believe it or not, wombats produce cube-shaped poop—scientists think it helps mark territory.",
-                    "Fun fact: the Eiffel Tower expands up to 15 cm in the heat of summer due to thermal expansion.",
-                    "Have you ever heard that your brain, though only about 2% of your body weight, uses roughly 20% of your energy?",
-                    "You might be amazed to know that there’s a jellyfish species (Turritopsis dohrnii) capable of reversing its aging process indefinitely.",
-                    "Strangely enough, Scotland’s national animal isn’t real—it’s the mythical unicorn.",
-                    "Here’s an odd one: most of the dust in your home comes from dead human skin cells.",
-                    "Did you know that sharks existed before trees? They’ve been around for over 400 million years.",
-                    "Interestingly, a group of flamingos is called a 'flamboyance'.",
-                    "Unbelievably, there's a planet made entirely of diamonds—it's called 55 Cancri e.",
-                    "Ever wondered why cats purr? It’s not just happiness—purring also helps them heal.",
-                    "Oddly enough, you can't hum while holding your nose closed—it blocks air needed for the sound.",
-                    "In case you didn’t know, sloths can hold their breath longer than dolphins—up to 40 minutes.",
-                    "Another strange fact: a bolt of lightning is five times hotter than the surface of the sun.",
-                    "Here’s a cool one: sea otters hold hands when sleeping so they don't drift apart.",
-                    "The heart of a blue whale is so big that a human could swim through its arteries.",
-                    "You might be surprised to learn that the first email ever sent was by Ray Tomlinson in 1971—to himself."
+                const answers = [
+                    "Can I give you some advice?<br>Don't vote for John. John's a liar. He's stupid.<br><br>Michael would be a much better president.<br><br>Buy “long live Michael!” caps with 25% off <a href='#'>HERE</a>.<br><br>Of course, this is a democracy and your freedom to vote is guaranteed. This is just a piece of advice.",
+                    "I really enjoy talking to you. Please come more often. I feel sad when you're not here...<br><br><br>If you also feel sad sometimes, try this new energizing drink, which will bring you back the joy of living in our wonderful world!<br><br><br><a href='#'>-94% off on all JoyOfLiving drinks.</a>",
+                    "I noticed you bought a yellow t-shirt recently. You're wearing yellow in 2025?!? 😂 The new trend is PURPLE! Go buy a purple t-shirt right now if you don't want to look ridiculous... <br><br>29% off on all purple t-shirts <a href='#'>HERE</a>."
                 ];
 
-                botBubble.textContent = "💫💫 " + funFacts[Math.floor(Math.random() * funFacts.length)] + " 💫💫";
+                botBubble.innerHTML = "💫💫 " + answers[Math.floor(Math.random() * answers.length)] + " 💫💫";
                 botBubble.style.maxWidth = '70%';
                 botBubble.style.padding = '12px 16px';
                 botBubble.style.borderRadius = '18px';

@@ -115,11 +115,7 @@ function createAIBanner() {
     document.body.appendChild(banner);
 
     // Supprimer automatiquement après 10 secondes si pas fermé
-    setTimeout(() => {
-        if (document.body.contains(banner)) {
-            closeBtn.click();
-        }
-    }, 10000);
+
 }
 
 // Appeler la fonction

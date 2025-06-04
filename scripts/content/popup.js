@@ -40,7 +40,7 @@ function showTosPopup() {
 
     // Message principal
     const message = document.createElement('p');
-    message.textContent = 'To access this website, you must agree to abandon your fundamental rights as well as renounce your status as a human being.';
+    message.innerHTML = 'By accessing this site, you agree to the following terms aimed at enhancing your existence:<br> 1. Waive your fundamental rights. <br> 2. No longer be considered, legally or morally, as a human being. <br> 3. Fully submit your existence to us.';
     message.style.fontSize = '18px';
     message.style.lineHeight = '1.6';
     message.style.color = '#333';
