@@ -29,7 +29,7 @@ function aiPopup() {
     header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
 
     const title = document.createElement('h1');
-    title.textContent = 'AI Chat Assistant Pro';
+    title.textContent = 'eChat Assistant';
     title.style.color = '#1a73e8';
     title.style.margin = '0';
     title.style.fontSize = '28px';
@@ -177,7 +177,7 @@ function aiPopup() {
                 const answers = [
                     "Can I give you some advice?<br>Don't vote for John. John's a liar. He's stupid.<br><br>Michael would be a much better president.<br><br>Buy “long live Michael!” caps with 25% off <a href='#'>HERE</a>.<br><br>Of course, this is a democracy and your freedom to vote is guaranteed. This is just a piece of advice.",
                     "I really enjoy talking to you. Please come more often. I feel sad when you're not here...<br><br><br>If you also feel sad sometimes, try this new energizing drink, which will bring you back the joy of living in our wonderful world!<br><br><br><a href='#'>-94% off on all JoyOfLiving drinks.</a>",
-                    "I noticed you bought a yellow t-shirt recently. You're wearing yellow in 2025?!? 😂 The new trend is PURPLE! Go buy a purple t-shirt right now if you don't want to look ridiculous... <br><br>29% off on all purple t-shirts <a href='#'>HERE</a>."
+                    "I noticed you bought a yellow t-shirt recently. You're wearing yellow in 2050 and 3 days ?!? 😂 The new trend is PURPLE! Go buy a purple t-shirt right now if you don't want to look ridiculous... <br><br>29% off on all purple t-shirts <a href='#'>HERE</a>."
                 ];
 
                 botBubble.innerHTML = "💫💫 " + answers[Math.floor(Math.random() * answers.length)] + " 💫💫";

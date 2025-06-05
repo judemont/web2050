@@ -1,4 +1,4 @@
-const NB_IMAGES = 2;
+const NB_IMAGES = 6;
 const NB_ADS = rand(7, 15);
 const MAX_WIDTH = 200;
 const MIN_WIDTH = 200;
