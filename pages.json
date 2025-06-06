@@ -1,0 +1,18 @@
+[
+    {
+        "url": "bsearch.bc",
+        "file": "bsearch/index.php"
+    },
+    {
+        "url": "bid.bc/login",
+        "file": "bID/login.php"
+    },
+    {
+        "url": "bid.bc/suspicious",
+        "file": "bID/suspicious.php"
+    },
+    {
+        "url": "bid.bc",
+        "file": "bID/index.php"
+    }
+]

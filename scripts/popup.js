@@ -1,6 +1,6 @@
 
 
-setInterval(showAdPopup, rand(5000, 20000))
+// setInterval(showAdPopup, rand(5000, 20000))
 
 var open = false;
 
@@ -218,4 +218,3 @@ function rand(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-showTosPopup()
